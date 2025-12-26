@@ -1,0 +1,11 @@
+:root {
+  --green: #34c94b;
+}
+
+.btn {
+  background: black;
+  color: var(--green);
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
