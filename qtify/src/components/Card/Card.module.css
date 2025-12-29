@@ -1,0 +1,39 @@
+.card {
+  width: 160px;
+  border-radius: 10px;
+  overflow: hidden; /* IMPORTANT: image must not overflow */
+  background-color: #fff;
+}
+
+/* Image takes more space than bottom section */
+.card-image {
+  position: relative;
+  height: 170px; /* image section */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Chip positioning as per Figma */
+.follows-chip {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: #121212 !important;
+  color: white !important;
+  font-size: 12px !important;
+  height: 22px !important;
+}
+
+.card-info {
+  padding: 8px;
+  height: 50px; /* bottom section */
+}
+
+.album-title {
+  font-size: 14px;
+  font-weight: 600;
+}

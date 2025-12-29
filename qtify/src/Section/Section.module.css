@@ -1,0 +1,31 @@
+.section {
+  padding: 16px;
+}
+
+/* Title + Collapse button spacing */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.collapse-btn {
+  background: none;
+  border: none;
+  color: #34c94b;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Grid layout */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
