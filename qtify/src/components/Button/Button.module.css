@@ -8,6 +8,7 @@
   border-radius: 8px;
   padding: 8px 16px;
   cursor: pointer;
+  font-family: 'Poppins'
 }
 .btn:hover {
   background: var(--green);
