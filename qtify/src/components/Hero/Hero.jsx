@@ -1,13 +1,21 @@
 import headphones from "../../assets/vibrating-headphone.png";
+import styles from "./Hero.module.css";
 
 const Hero = () => {
   return (
-    <div style={{ display: "flex", padding: "40px", background: "black", color: "white" }}>
-      <div>
-        <h1>100 Thousand Songs, ad-free</h1>
-        <p>Over thousands of podcast episodes</p>
+    <div className={styles.hero}>
+      <div className={styles.heroContent}>
+        <div className={styles.text}>
+          <h1>100 Thousand Songs, ad-free</h1>
+          <p>Over thousands of podcast episodes</p>
+        </div>
+
+        <img
+          src={headphones}
+          alt="headphones"
+          className={styles.image}
+        />
       </div>
-      <img src={headphones} alt="headphones" height={200} />
     </div>
   );
 };

@@ -8,3 +8,39 @@
 .text h1 {
   color: white;
 }
+.hero {
+  height: 270px;
+  background-color: #121212;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 48px; /* space between text & image */
+}
+
+.text {
+  text-align: center;
+}
+
+.text h1 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.text p {
+  color: white;
+  font-size: 18px;
+}
+
+.image {
+  height: 212px;
+}
+.image img {
+  height: 100%;
+}     

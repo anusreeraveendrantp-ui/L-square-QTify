@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+ 
+  padding: 0px 30px 60px 30px;
+  gap:32px
+}
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  padding: 16px 0;
+}
+.swiper {
+  width: 100%;
+  padding-bottom: 16px;
+}
+.slide {
+  width: auto !important; /* override inline style from swiper */
+}     

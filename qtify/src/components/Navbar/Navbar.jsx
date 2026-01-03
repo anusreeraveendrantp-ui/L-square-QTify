@@ -1,20 +1,14 @@
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
 import Button from "../Button/Button";
-
-const Navbar = () => {
+import style from "./Navbar.module.css";
+const Navbar = ({ searchData }) => {
   return (
     <div
-      style={{
-        display: "flex",
-        gap: "16px",
-        padding: "16px",
-        background: "#34C94B",
-        alignItems: "center", // vertically center content
-      }}
+      className={style.navbar}
     >
       <Logo />
-      <Search />
+      <Search data={searchData}/>
       <Button text="Give Feedback" />
     </div>
   );

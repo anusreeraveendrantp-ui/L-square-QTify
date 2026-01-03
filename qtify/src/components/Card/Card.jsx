@@ -1,24 +1,56 @@
-import { Chip } from "@mui/material";
-import "./Card.css";
+import { Chip, Tooltip } from "@mui/material";
+import styles from "./Card.module.css";
+import { Link } from "react-router-dom";
 
-const Card = ({ album }) => {
-  return (
-    <div className="card">
-      {/* Image Section */}
-      <div className="card-image">
-        <img src={album.image} alt={album.title} />
-        <Chip
-          label={`${album.follows} Follows`}
-          className="follows-chip"
-        />
-      </div>
+const Card = ({ data, type }) => {
+  const getCard=(type)=>{
+    switch(type){
+      case "album":{
+        const {image,follows,title,slug,songs} = data;
+        return (
+          <Tooltip title={`${songs.length} Songs`} placement="top" arrow>
+            <Link to={`/album/${slug}`} >
+              <div className={styles.wrapper}>
+                <div className={styles.card}>
+                  <img src={image} alt={title} loading="lazy" />
+                  <div className={styles.banner}>
+                    <Chip label={`${follows} Follows`} className={styles.chip}
+                    size="small"/>
+                </div>
+              </div>
+             
+              <div className={styles.titleWrapper}>
+                <p>{title}</p>
+              </div>
+              </div>
+            </Link>
+          </Tooltip>
+        );
+      }
+      case "song":{
+        const {image,likes,title} = data;
+        return (
+          <div className={styles.wrapper}>
+            <div className={styles.card}>
+              <img src={image} alt={title} loading="lazy" />
+              <div className={styles.banner}>
+                <div className={styles.pill}>
+                  <p>{likes} Likes</p>
+                </div>
+              </div>
+            </div>
+            <div className={styles.titleWrapper}>
+              <p>{title}</p>
+            </div>
+          </div>
+        );
+      }
+      default:
+        return <></>;
+    }
+  }
 
-      {/* Bottom Section */}
-      <div className="card-info">
-        <p className="album-title">{album.title}</p>
-      </div>
-    </div>
-  );
+  return getCard(type);
 };
 
 export default Card;

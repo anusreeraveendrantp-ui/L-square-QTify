@@ -1,4 +1,6 @@
-const Search = () => {
+import React from "react";
+
+const Search = ({ data }) => {
   return (
     <input
       type="text"

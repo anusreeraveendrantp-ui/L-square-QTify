@@ -1,0 +1,34 @@
+
+.navbar{
+     background-color: #34C94B;
+  display: flex;
+  align-items: center;
+
+   gap: 16px;
+   padding: 16px 32px;
+   justify-content: space-between; 
+}
+
+
+.navbar:hover {
+  background: #28a745;
+}       
+.navbar:hover .btn {
+  background: var(--green);
+  color: black;
+}           
+.navbar:hover .btn:hover {
+  background: black;
+  color: var(--green);
+}   
+.navbar .btn {
+  background: black;
+  color: var(--green);
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.logo{
+    height: 40px;
+    width: 120px;
+}   

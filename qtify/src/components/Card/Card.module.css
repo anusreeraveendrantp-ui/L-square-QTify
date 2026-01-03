@@ -1,39 +1,92 @@
-.card {
+
+
+/* Outer wrapper */
+/* .wrapper {
   width: 160px;
-  border-radius: 10px;
-  overflow: hidden; /* IMPORTANT: image must not overflow */
-  background-color: #fff;
-}
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+} */
 
-/* Image takes more space than bottom section */
-.card-image {
+/* Card container */
+.card {
   position: relative;
-  height: 170px; /* image section */
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #121212;
 }
 
-.card-image img {
+/* Album / Song image */
+.card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-/* Chip positioning as per Figma */
-.follows-chip {
+/* Bottom banner */
+.banner {
   position: absolute;
-  bottom: 8px;
-  left: 8px;
-  background-color: #121212 !important;
-  color: white !important;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+}
+
+/* Chip for album follows */
+.chip {
   font-size: 12px !important;
-  height: 22px !important;
+  font-weight: 500;
+  background-color: #121212 !important;
+  color: #ffffff !important;
 }
 
-.card-info {
-  padding: 8px;
-  height: 50px; /* bottom section */
+/* Likes pill for songs */
+.pill {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
-.album-title {
+/* Title container */
+.titleWrapper {
+  width: 100%;
+}
+
+/* Album / song title */
+.titleWrapper p {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+
+  /* Text ellipsis */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
+/* Remove link underline */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hover effect */
+/* .wrapper:hover .card {
+  transform: scale(1.03);
+  transition: transform 0.2s ease-in-out;
+} */
+/* .wrapper:hover .banner {
+  background-color: #1db954;
+  transition: background-color 0.2s ease-in-out;
+}          */
